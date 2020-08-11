@@ -998,6 +998,7 @@ namespace Microsoft.Quantum.QsCompiler
             var compilation = new QsCompilation(fromSources.ToImmutableArray(), this.CompilationOutput.EntryPoints);
             try
             {
+                // This is where serialization happens.
                 Json.Serializer.Serialize(writer, compilation);
             }
             catch (Exception ex)

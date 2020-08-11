@@ -790,6 +790,7 @@ type QsNamespace = {
 
 
 /// Describes a compiled Q# library or executable.
+// TODO: This is what needs to be serialized using bond
 type QsCompilation = {
     /// contains all compiled namespaces
     Namespaces : ImmutableArray<QsNamespace>

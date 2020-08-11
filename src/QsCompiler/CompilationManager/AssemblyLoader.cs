@@ -110,6 +110,7 @@ namespace Microsoft.Quantum.QsCompiler
             (compilation, reader.ReadRootValueAsArray) = (null, false);
             try
             {
+                // Here's where the deserialization happens.
                 compilation = Json.Serializer.Deserialize<QsCompilation>(reader);
                 return compilation != null && !compilation.Namespaces.IsDefault && !compilation.EntryPoints.IsDefault;
             }
