@@ -1,0 +1,17 @@
+﻿namespace Microsoft.Quantum.QsCompiler.SyntaxTree.Schema;
+
+/*
+    
+*/
+enum BondBindingKind {
+    ImmutableBinding,
+    MutableBinding
+}
+
+/*
+    
+*/
+struct BondCompilation
+{
+    5: required BondBindingKind BindingKind = ImmutableBinding;
+}
